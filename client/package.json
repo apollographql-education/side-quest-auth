@@ -2,6 +2,10 @@
   "name": "airlock-frontend",
   "version": "0.1.0",
   "private": true,
+  "engines": {
+    "npm": ">=6.0.0",
+    "node": ">=14.0.0 <17"
+  },
   "dependencies": {
     "@apollo/client": "^3.4.16",
     "@apollo/space-kit": "^9.11.0",
