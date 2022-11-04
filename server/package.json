@@ -1,5 +1,5 @@
 {
-  "name": "airlock-course2-starter",
+  "name": "airlock-side-quest-auth-demo",
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
@@ -8,6 +8,7 @@
     "launch": "node utils/launch.js",
     "postinstall": "npm run install-services",
     "install-services": "node utils/install.js",
+    "update-services": "node utils/update.js",
     "db:reset": "node utils/reset.js"
   },
   "nodemonConfig": {
