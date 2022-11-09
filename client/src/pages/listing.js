@@ -116,7 +116,7 @@ export default function Listings() {
             overallRating,
             costPerNight,
             bookings
-          } = data?.listing;
+          } = data.listing;
 
           const amenitiesByCategory = amenities.reduce((acc, amenity) => {
             if (acc[amenity.category]) {
