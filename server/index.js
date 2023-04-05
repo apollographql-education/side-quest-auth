@@ -51,15 +51,17 @@ async function startApolloServer() {
           userInfo = { userId: data.id, userRole: data.role };
         }
 
+        const { cache } = server;
+
         // Below is the `context` object resolvers will have access to
         return {
           ...userInfo,
           dataSources: {
             bookingsDb: new BookingsDataSource(),
             reviewsDb: new ReviewsDataSource(),
-            listingsAPI: new ListingsAPI(),
-            accountsAPI: new AccountsAPI(),
-            paymentsAPI: new PaymentsAPI(),
+            listingsAPI: new ListingsAPI({ cache }),
+            accountsAPI: new AccountsAPI({ cache }),
+            paymentsAPI: new PaymentsAPI({ cache }),
           },
         };
       },
